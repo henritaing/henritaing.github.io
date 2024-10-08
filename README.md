@@ -9,9 +9,9 @@ This portfolio website is meant to bring my projects together in a single place 
 ## Acknowledgements
 
  - [Design of the website](https://html5up.net/hyperspace)
-  - Icons:
+   - Icons:
 		Font Awesome (fontawesome.io)
-- - Other:
+   - Other:
 		jQuery (jquery.com)
 		Scrollex (github.com/ajlkn/jquery.scrollex)
 		Responsive Tools (github.com/ajlkn/responsive-tools)
