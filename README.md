@@ -18,10 +18,3 @@ This portfolio website is meant to bring my projects together in a single place 
 
  - [Video tutorial to make and deploy the website](https://www.youtube.com/watch?v=ocdwh0KYeUs)
 
-
-	Other:
-		jQuery (jquery.com)
-		Scrollex (github.com/ajlkn/jquery.scrollex)
-		Responsive Tools (github.com/ajlkn/responsive-tools)
-
-
