@@ -3,7 +3,7 @@
 
 This portfolio website is meant to bring my projects together in a single place and for anybody who is curious about how someone who has a hybrid profile (technical project manager) approaches projects.
 
-
+[Link to the website](https://henritaing.github.io/)
 
 
 ## Acknowledgements
