@@ -8,7 +8,6 @@
 body {
   font-family: sans-serif;
   background-color: #f8f9fa;
-  color: #333;
   padding: 2rem;
 }
 
@@ -62,8 +61,7 @@ body {
 }
 
 .projects img {
-  width: 300px;
-  max-width: 100%;
+  width: 30%;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
@@ -75,7 +73,6 @@ body {
 
 .project-text p {
   margin-bottom: 1rem;
-  color: #555;
 }
 
 .project-text a {
