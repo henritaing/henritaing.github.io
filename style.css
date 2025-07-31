@@ -55,6 +55,10 @@ body {
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
+.projects h3 {
+  font-style: italic;
+}
+
 .project-row {
   display: flex;
   flex-direction: row;
@@ -73,6 +77,8 @@ body {
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
 }
+
+
 
 .project-text p {
   margin-bottom: 1rem;
