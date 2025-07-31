@@ -53,11 +53,15 @@ body {
 .project-row {
   display: flex;
   flex-direction: row;
+  margin-bottom: 20px;
+  gap: 10px;
 }
 
 .project-row.reverse {
   display: flex;
   flex-direction: row;
+  margin-bottom: 20px;
+  gap: 10px;
 }
 
 .projects img {
@@ -96,3 +100,4 @@ body {
     justify-content: center;
   }
 }
+
