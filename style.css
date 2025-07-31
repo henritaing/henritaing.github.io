@@ -20,6 +20,7 @@ body {
 /* INTRO SECTION */
 .intro {
   margin-bottom: 4rem;
+  gap:10px;
 }
 
 .intro-content {
