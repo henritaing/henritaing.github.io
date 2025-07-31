@@ -53,7 +53,7 @@ body {
 
 .project-row {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 }
 
 .project-row.reverse {
