@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resume – Henri Taing</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Specific overrides for the Resume page to look like your PDF */
+    .resume-container { max-width: 800px; margin: 4rem auto; padding: 0 2rem; }
+    .resume-header { border-bottom: 2px solid var(--text); padding-bottom: 1.5rem; margin-bottom: 2.5rem; }
+    .resume-header h1 { margin-bottom: 0.2rem; }
+    .contact-info { color: var(--subtext); font-size: 0.95rem; display: flex; gap: 15px; flex-wrap: wrap; }
+    
+    .resume-section { margin-bottom: 3rem; }
+    .resume-section h2 { font-size: 1.2rem; text-transform: uppercase; letter-spacing: 1px; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem; margin-bottom: 1.5rem; }
+    
+    .exp-item { margin-bottom: 2rem; }
+    .exp-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.3rem; }
+    .exp-header h3 { font-size: 1.1rem; font-weight: 700; }
+    .exp-location { font-style: italic; color: var(--subtext); font-size: 0.9rem; }
+    .exp-date { font-weight: 600; font-size: 0.9rem; }
+    
+    .exp-item ul { margin-left: 1.2rem; margin-top: 0.5rem; }
+    .exp-item li { margin-bottom: 0.4rem; font-size: 0.95rem; }
+    
+    .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; }
+    .skill-category strong { display: block; margin-bottom: 0.3rem; font-size: 0.9rem; text-transform: uppercase; color: var(--subtext); }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-content">
+      <a href="index.html" class="logo" style="text-decoration: none; color: inherit;">HT</a>
+      <div class="nav-links">
+        <a href="index.html" class="resume-btn">Back to Portfolio</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="resume-container">
+    <header class="resume-header">
+      <h1>Henri TAING</h1>
+      <p style="font-size: 1.2rem; font-weight: 500; margin-bottom: 0.5rem;">Solutions Engineer</p>
+      <div class="contact-info">
+        <span>henri.taing.pro@gmail.com</span>
+        <a href="https://www.linkedin.com/in/henri-taing-088a11219/" target="_blank">LinkedIn</a>
+      </div>
+    </header>
+
+    <section class="resume-section">
+      <h2>About me</h2>
+      <p>Engineer thriving in fast-moving, collaborative environments, eager to grow in architecture.    I want to work for a company that brings technology and impact together to make the world a better place.</p>
+    </section>
+
+    <section class="resume-section">
+      <h2>Work Experience</h2>
+      
+      <div class="exp-item">
+        <div class="exp-header">
+          <h3>IT Solutions Engineer – Recipharm</h3>
+          <span class="exp-date">June 2025 - Now</span>
+        </div>
+        <div class="exp-location">Uppsala, Sweden</div>
+        <ul>
+          <li>Supporting global rollout of Veeva Vault Quality Suite, replacing 15+ legacy systems across 17 sites, and onboarding 5000+ users.</li>
+          <li>Defined system architecture requirements and collaborated with cross-functional teams for secure deployment.</li>
+          <li>Designing BI integration between SAP & Veeva for KPI automation and reworking IT procedures for ISO27001 certification.</li>
+        </ul>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-header">
+          <h3>Management Consultant – CGI Business Consulting</h3>
+          <span class="exp-date">Sept 2023 - May 2025</span>
+        </div>
+        <div class="exp-location">Aix-en-Provence, France</div>
+        <ul>
+          <li>Assisted in structuring the IT Security Program (~3M€).</li>
+          <li>Led Agile Methodology adoption in the Data & Analytics Product Service Line for ~300 people across 10 teams.</li>
+          <li>Supported BI Program Manager on risk, budget, resources, and quality delivery.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="resume-section">
+      <h2>Education</h2>
+      <div class="exp-item">
+        <div class="exp-header">
+          <h3>MSc, Information Systems Management</h3>
+          <span class="exp-date">2021 - 2024</span>
+        </div>
+        <p>Centrale Méditerranée Engineering School, Marseille, France. GPA: 3.91/4. Focus: Cybersecurity, Mathematics, Data Analytics.</p>
+      </div>
+      <div class="exp-item">
+        <div class="exp-header">
+          <h3>Erasmus, MSc, Business Informatics</h3>
+          <span class="exp-date">2023</span>
+        </div>
+        <p>TU Berlin, Germany. Focus: Technology Management, Quantum Computing.</p>
+      </div>
+    </section>
+
+    <section class="resume-section">
+      <h2>Skills & Certifications</h2>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <strong>Certifications</strong>
+          <p>AWS Solutions Architect Assoc., ML Specialization (DeepLearning.AI), ISC2 Cybersecurity (CC).</p>
+        </div>
+        <div class="skill-category">
+          <strong>Analytics</strong>
+          <p>Python, SQL, Excel.</p>
+        </div>
+        <div class="skill-category">
+          <strong>Languages</strong>
+          <p>French (Native), English (C1), Chinese (B1), Swedish (A1).</p>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

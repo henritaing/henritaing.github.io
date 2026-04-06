@@ -1,4 +1,11 @@
-/* Base Reset */
+:root {
+  --bg: #ffffff;
+  --text: #1a1a1a;
+  --accent: #0366d6;
+  --border: #ececec;
+  --subtext: #666666;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -6,181 +13,109 @@
 }
 
 body {
-  font-family: sans-serif;
-  background-color: #fcf1ff;
-  padding: 2rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
 }
 
 .container {
-  max-width: 90%;
+  max-width: 1000px;
   margin: auto;
-  margin-bottom: 20px;
+  padding: 0 2rem;
 }
 
-/* INTRO SECTION */
-.intro {
+/* Navbar */
+.navbar {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--border);
   margin-bottom: 4rem;
-  padding: 6rem 2rem;
-  background-image: url('images/backgroundintro.jpg'); 
-  background-size: cover;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-position: center;
-  position: relative;
-  animation: moveBg 30s linear infinite;
-  border-radius: 16px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
 }
 
-@keyframes moveBg {
-  0% { background-position: center 0; }
-  100% { background-position: center 100px; }
-}
-
-
-.intro h1 {
-  font-size: 2.5rem;
-}
-
-.intro-content {
+.nav-content {
+  max-width: 1000px;
+  margin: auto;
+  padding: 0 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 2rem;
-  flex-wrap: wrap; /* Optional: ensures it doesn't overflow on small screens */
 }
 
-.socials {
-  display: flex;
-  flex-direction: column;
-  margin-left:30px;
-  gap: 10px;
+.logo { font-weight: 800; font-size: 1.2rem; }
+
+.resume-btn {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 600;
+  border: 1px solid var(--text);
+  padding: 0.4rem 1rem;
+  border-radius: 4px;
+  transition: 0.2s;
 }
 
-.socials a img {
-  width: 32px;
-  height: 32px;
-  transition: transform 0.2s ease;
-}
+.resume-btn:hover { background: var(--text); color: #fff; }
 
-.socials a img:hover {
-  transform: scale(1.1);
-}
+/* Intro */
+.intro { margin-bottom: 6rem; }
+.intro h1 { font-size: 3.5rem; letter-spacing: -1px; margin-bottom: 0.5rem; }
+.intro p { font-size: 1.4rem; color: var(--subtext); max-width: 600px; }
 
-/* Base fade-in animation */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+.socials { margin-top: 1.5rem; display: flex; gap: 20px; }
+.socials a { color: var(--accent); text-decoration: none; font-weight: 600; }
 
-/* Fade-in animation */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.fade-in {
-  opacity: 0;
-  animation: fadeInUp 0.8s forwards;
-}
-
-.step-1 {
-  animation-delay: 0.2s;
-}
-.step-2 {
-  animation-delay: 0.6s;
-}
-.step-3 {
-  animation-delay: 1s;
-}
-
-
-
-/* Underline effect */
-.underline {
-  width: 200px;
-  height: 4px;
-  background-color: #0366d6;
-  margin: 0.5rem 0 1rem 0;
-  border-radius: 2px;
-}
-
-
-/* PROJECTS SECTION */
-.projects img {
-  width: 35%;
-  height: 35%;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-.projects h3 {
-  font-style: italic;
-  margin-bottom: 0.5rem;
-}
-
+/* Projects */
 .project-row {
   display: flex;
-  flex-direction: row;
-  margin-bottom: 80px;
-  gap: 30px;
+  align-items: center; /* This vertically centers the text against the image */
+  justify-content: space-between;
+  gap: 4rem;
+  margin-bottom: 8rem;
 }
 
+.project-text { flex: 1; }
+.project-text h2 { font-size: 1.8rem; margin-bottom: 0.5rem; }
+.project-text h3 { font-size: 1rem; color: var(--subtext); margin-bottom: 1.5rem; font-weight: 500; }
+.project-text p { margin-bottom: 1rem; }
+.project-text ul { margin-left: 1.5rem; margin-bottom: 1rem; }
+.project-text a { color: var(--accent); text-decoration: none; font-weight: 600; }
+
+.projects img {
+  flex: 1; /* Takes up the other 50% */
+  width: 100%; /* Ensures it fills its flex container */
+  max-width: 500px; /* Limits size on ultra-wide screens */
+  height: auto;
+  object-fit: cover; /* Prevents distortion */
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+/* Maintain the zigzag but keep centering */
 .project-row.reverse {
-  display: flex;
-  flex-direction: row;
-  margin-bottom: 80px;
-  gap: 30px;
+  flex-direction: row-reverse;
 }
 
-.project-text h2 {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
+/* Animations */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
+.fade-in { opacity: 0; animation: fadeInUp 0.6s forwards; }
+.step-1 { animation-delay: 0.1s; }
+.step-2 { animation-delay: 0.3s; }
+.step-3 { animation-delay: 0.5s; }
 
-
-.project-text p {
-  margin-bottom: 1rem;
-}
-
-.project-text a {
-  color: #0366d6;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.project-text a:hover {
-  text-decoration: underline;
-}
-
-@media (max-width: 1080px) {
-  .intro-content, 
-  .project-row,
+/* Mobile */
+@media (max-width: 850px) {
+  .project-row, 
   .project-row.reverse {
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
+    flex-direction: column !important; /* Stack them on small screens */
+    align-items: flex-start;
+    gap: 2rem;
   }
-
-  /* Prevent wrong image-first order in reverse rows on mobile */
-  .project-row.reverse {
-    flex-direction: column-reverse;
+  .projects img { width: 100%;
+    max-width: none; /* Remove max-width on mobile */
   }
-
-  .projects img {
-    width: 80%; /* Optional: scale better on mobile */
-  }
+  .intro h1 { font-size: 2.5rem; }
 }
