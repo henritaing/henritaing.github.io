@@ -20,23 +20,21 @@ body {
 }
 
 .container {
-  max-width: 1680px;
+  max-width: 1100px; /* 1680 was way too wide for a reading layout */
   margin: auto;
   padding: 0 2rem;
 }
 
 /* Navbar */
 .navbar {
-  padding: 1.5rem 0;
   border-bottom: 1px solid var(--border);
   margin-bottom: 4rem;
-  
 }
 
 .nav-content {
-  max-width: 1680px;
+  max-width: 1100px;
   margin: auto;
-  padding: 0 2rem;
+  padding: 1.5rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -51,7 +49,7 @@ body {
   border: 1px solid var(--text);
   padding: 0.4rem 1rem;
   border-radius: 4px;
-  transition: 0.2s;
+  transition: background 0.2s, color 0.2s;
 }
 
 .resume-btn:hover { background: var(--text); color: #fff; }
@@ -67,39 +65,51 @@ body {
 /* Projects */
 .project-row {
   display: flex;
-  align-items: center; /* This vertically centers the text against the image */
-  justify-content: space-between;
+  align-items: center;
   gap: 4rem;
-  margin-bottom: 8rem;
+  margin-bottom: 6rem;
 }
 
-.project-text { flex: 1; }
-.project-text h2 { font-size: 1.8rem; margin-bottom: 0.5rem; }
-.project-text h3 { font-size: 1rem; color: var(--subtext); margin-bottom: 1.5rem; font-weight: 500; }
-.project-text p { margin-bottom: 1rem; }
-.project-text ul { margin-left: 1.5rem; margin-bottom: 1rem; }
-.project-text a { color: var(--accent); text-decoration: none; font-weight: 600; }
+.project-row.reverse { flex-direction: row-reverse; }
 
-.projects img {
-  flex: 1; /* Takes up the other 50% */
-  width: 100%; /* Ensures it fills its flex container */
-  max-width: 500px; /* Limits size on ultra-wide screens */
+.project-text { flex: 1; }
+.project-text h2 { font-size: 1.6rem; margin-bottom: 0.25rem; }
+.project-text h3 { font-size: 0.95rem; color: var(--subtext); margin-bottom: 1.25rem; font-weight: 500; }
+.project-text p { margin-bottom: 0.75rem; }
+.project-text a { color: var(--accent); text-decoration: none; font-weight: 600; }
+.project-text a:hover { text-decoration: underline; }
+
+/* Single-image rows */
+.project-row > img {
+  flex: 1;
+  width: 100%;
+  max-width: 500px;
   height: auto;
-  object-fit: cover; /* Prevents distortion */
   border-radius: 8px;
   border: 1px solid var(--border);
   box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 }
 
-/* Maintain the zigzag but keep centering */
-.project-row.reverse {
-  flex-direction: row-reverse;
+/* Multi-image gallery (Slock) */
+.project-gallery {
+  flex: 1;
+  max-width: 500px;
+  display: grid;
+  gap: 1rem;
+}
+
+.project-gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 }
 
 /* Animations */
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(15px); }
-  to { opacity: 1; transform: translateY(0); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
 .fade-in { opacity: 0; animation: fadeInUp 0.6s forwards; }
@@ -107,16 +117,19 @@ body {
 .step-2 { animation-delay: 0.3s; }
 .step-3 { animation-delay: 0.5s; }
 
+@media (prefers-reduced-motion: reduce) {
+  .fade-in { opacity: 1; animation: none; }
+}
+
 /* Mobile */
 @media (max-width: 850px) {
-  .project-row, 
+  .project-row,
   .project-row.reverse {
-    flex-direction: column !important; /* Stack them on small screens */
-    align-items: flex-start;
+    flex-direction: column;
+    align-items: stretch;
     gap: 2rem;
   }
-  .projects img { width: 100%;
-    max-width: none; /* Remove max-width on mobile */
-  }
+  .project-row > img,
+  .project-gallery { max-width: none; }
   .intro h1 { font-size: 2.5rem; }
 }

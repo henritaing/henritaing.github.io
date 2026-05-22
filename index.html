@@ -18,60 +18,52 @@
 
   <main class="container">
     <section class="intro">
-      <div class="intro-text">
-        <h1 class="fade-in step-1">Hi, I'm Henri</h1>
-        <p class="fade-in step-2">Solutions Engineer passionate about building smart and simple solutions.</p>
-        <div class="socials fade-in step-3">
-          <a href="https://github.com/henritaing" target="_blank">GitHub</a>
-          <a href="https://www.linkedin.com/in/henri-taing-088a11219/" target="_blank">LinkedIn</a>
-        </div>
+      <h1 class="fade-in step-1">Hi, I'm Henri</h1>
+      <p class="fade-in step-2">Solutions Engineer passionate about building smart and simple solutions.</p>
+      <div class="socials fade-in step-3">
+        <a href="https://github.com/henritaing" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/henri-taing-088a11219/" target="_blank" rel="noopener">LinkedIn</a>
       </div>
     </section>
 
     <section class="projects">
-      <div class="project-row">
-        <div class="project-text">
-          <h2>Slock | Quantitative Portfolio Analyzer</h2>
-          <h3>FastAPI, React (Vite), SQLite, Pandas</h3>
-          <p>Local full-stack financial dashboard for tracking stock performance, calculating risk metrics (Alpha, Beta, Volatility, RSI), and visualizing unrealized P&L.</p>
-          <p>You can find the code and the way to deploy it on your local machine at the folloiwng link
-            <a href="https://slock.henritaing.com" target="_blank">Slock App</a></p>
-        </div>
-        <img src="images/slock_dashboard.png" alt="Slock Dashboard" />
-        <img src="images/slock_my_trades.png" alt="Slock My Trades" />
-        <img src="images/slock_earnings_calendar.png" alt="Slock Earnings" />
-      </div>
 
-      <div class="project-row">
+      <article class="project-row">
+        <div class="project-text">
+          <h2>Slock — Quantitative Portfolio Analyzer</h2>
+          <h3>FastAPI, React (Vite), SQLite, Pandas</h3>
+          <p>Local full-stack financial dashboard for tracking stock performance, calculating risk metrics (Alpha, Beta, Volatility, RSI), and visualizing unrealized P&amp;L.</p>
+          <p>Code and deployment instructions: <a href="https://slock.henritaing.com" target="_blank" rel="noopener">Slock App</a>.</p>
+        </div>
+        <!-- Multiple screenshots stack in their own gallery, not in the main flex row -->
+        <div class="project-gallery">
+          <img src="images/slock_dashboard.png" alt="Slock dashboard showing portfolio overview and risk metrics" />
+          <img src="images/slock_my_trades.png" alt="Slock trades view listing individual positions" />
+          <img src="images/slock_earnings_calendar.png" alt="Slock earnings calendar view" />
+        </div>
+      </article>
+
+      <article class="project-row reverse">
         <div class="project-text">
           <h2>Machine Learning for Finance</h2>
           <h3>Python (Scikit-learn, Pandas)</h3>
-          <p>Inspired by the Youtube tutorial 
-            <a href="https://www.youtube.com/watch?v=9Y3yaoi9rUQ&t=1213s" target="_blank">"Algorithmic Trading – Machine Learning & Quant Strategies Course with Python"</a>
-            , the goal is to apply Machine Learning concepts to analyze CAC40 stocks financial data. It has been a great way to learn more about financial indicators, data preprocessing, and models in a practical context. It was also a way to put my portfolio in a more "quantitative" perspective, which is something I am interested in exploring more in the future.
-          </p>
-          <p>You can also see the code on Github with the following 
-            <a href="https://github.com/henritaing/mlforfinance">link</a>.
-          </p>
+          <p>Applied ML concepts to CAC40 stocks, inspired by <a href="https://www.youtube.com/watch?v=9Y3yaoi9rUQ" target="_blank" rel="noopener">this algorithmic trading course</a>. A practical way to learn financial indicators, data preprocessing, and modeling — and a step toward a more quantitative view of my own portfolio.</p>
+          <p>Code on <a href="https://github.com/henritaing/mlforfinance" target="_blank" rel="noopener">GitHub</a>.</p>
         </div>
-        <img src="images/tp_comparison_chart.png" alt="Machine Learning for Finance" />
-      </div>
-      
-       <div class="project-row">
-        <img src="images/relationship_mapping.png" alt="Relationship Mapping" />
+        <img src="images/tp_comparison_chart.png" alt="Comparison chart of ML model predictions on CAC40 stocks" />
+      </article>
+
+      <article class="project-row">
         <div class="project-text">
-          <h2>Relationship mapping - Map your friends to help your parents remember</h2>
+          <h2>Relationship Mapping</h2>
           <h3>Python (Plotly, Streamlit)</h3>
-          <p>I am lucky to have made many friends. But it also means that when I tell my mom about them, she keeps forgetting who's who.</p>
-          <p>So, to draw her a clear picture, I had this idea of mapping my friends as if we'd map processes (#consultingdoesn'tleaveyou).</p>
-          <a href="https://relationshipmapping-8qpjg4kqwudamemnmwodub.streamlit.app/">Feel free to try yourself!</a></p>
-          <p>You can also see the code on Github with the following 
-            <a href="https://github.com/henritaing/relationshipmapping">link</a>.
-          </p>
+          <p>I have a lot of friends, and my mom can't keep track. So I mapped them out the way a consultant maps a process. (#consultingdoesntleaveyou)</p>
+          <p><a href="https://relationshipmapping-8qpjg4kqwudamemnmwodub.streamlit.app/" target="_blank" rel="noopener">Try it yourself</a> · <a href="https://github.com/henritaing/relationshipmapping" target="_blank" rel="noopener">GitHub</a></p>
         </div>
-      </div>
+        <img src="images/relationship_mapping.png" alt="Network diagram showing friends grouped by relationship type" />
+      </article>
+
     </section>
-     
   </main>
 </body>
 </html>
