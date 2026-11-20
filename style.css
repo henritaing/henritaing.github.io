@@ -20,7 +20,7 @@ body {
 }
 
 .container {
-  max-width: 1680px; /* 1680 was way too wide for a reading layout */
+  max-width: 1080px; 
   margin: auto;
   padding: 0 2rem;
 }
